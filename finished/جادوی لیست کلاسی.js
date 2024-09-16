@@ -6,19 +6,28 @@ function sortNames(names) {
         let firstName = name.split(' ')[0]
         return firstName.length <= 6
     }
-    names = names.filter(isShort)
 
-    
+    function sortBySecondWord(arr) {
+        return arr.sort((a, b) => {
+            let secondWordA = a.split(' ')[1][0]
+            let secondWordB = b.split(' ')[1][0]
+            return secondWordA.localeCompare(secondWordB)
+        });
+    }
+    names = names.filter(isShort)
+    sortlist = sortBySecondWord(names)
+    return sortlist
 }
 
-
-// const n = parseInt(readline());
-// const namesArray = [];
-// for (let i = 0; i < n; i++) 
-//     namesArray.push(readline());
+const r = require('readline-sync');
+function readline() {return r.question();}
 
 
-let namesArray = ['Ron Weasley', 'Severus Snape', 'Rubeus Hagrid', 'Harry Potter']
+
+const n = parseInt(readline());
+const namesArray = [];
+for (let i = 0; i < n; i++) 
+    namesArray.push(readline());
 
 
 console.log(sortNames(namesArray).join('\n'));
