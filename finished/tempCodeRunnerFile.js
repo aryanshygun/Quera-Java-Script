@@ -1,1 +1,3 @@
-avg, sum
+le (storeNumberOrEnd(readline())) {
+    
+// }
