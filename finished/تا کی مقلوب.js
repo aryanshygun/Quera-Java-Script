@@ -1,32 +1,25 @@
 // https://quera.org/college/16059/chapter/64208/lesson/218138/?comments_page=1&comments_filter=ALL
 
-// const numbersArray = []
+const numbersArray = [];
 
-// function storeNumberOrEnd(number) {
-//     // TODO
-// }
+function storeNumberOrEnd(number) {
+    if (number !== 'End') {
+        numbersArray.push(number)
+        return true
+    } else {
 
-function printReverse(number) {
-    // let templist = number.toString().split('').map(Number).reverse()
-    // let reversedList = []
-    // for (let i = 0; i < number.length; i++) {
-    //     reversedList.push()
-    // }
+        return false
+    }
 }
 
-// while (storeNumberOrEnd(readline())) {
-    
-// }
+function printReverse(number){
+    return parseInt(number.toString().split('').reverse().join(''))
+}
 
+while (storeNumberOrEnd(readline())) {}
 
+numbersArray.reverse();
 
-
-
-
-
-x = 34897
-
-let templist = x.toString().split('').map(Number).reverse()
-
-let y = templist.shift()
-console.log(y)
+for (let i = 0; i < numbersArray.length; i++) {
+    console.log(printReverse(numbersArray[i]));
+}

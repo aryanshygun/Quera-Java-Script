@@ -1,3 +1,1 @@
-le (storeNumberOrEnd(readline())) {
-    
-// }
+356

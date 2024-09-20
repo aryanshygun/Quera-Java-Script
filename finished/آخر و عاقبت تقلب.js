@@ -1,4 +1,9 @@
-//https://quera.org/college/16059/chapter/64206/lesson/218102/?comments_page=1&comments_filter=ALL&submissions_page=1
-x = readline()
+const person = {
+    name: "Alirzea",
+    family: "Haghighi",
+    age: 22,
+    city: "Isfahan",
+    job: "JS developer"
+}
 
-console.log ( x * 5)
+console.log(Object.values(person)[0])
